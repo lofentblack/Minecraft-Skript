@@ -1,13 +1,13 @@
 ## Schnellanleitung ##
 
-```wget https://raw.githubusercontent.com/lofentblack/Teamspeak-3-Skript/refs/heads/main/Teamspeak3-Skript.sh```
+```wget https://raw.githubusercontent.com/lofentblack/Minecraft-Skript/refs/heads/main/Minecraft-Server-Skript.sh```
 
-```chmod 775 Teamspeak3-Skript.sh```
+```chmod 775 Minecraft-Server-Skript.sh```
 
-```./Teamspeak3-Skript.sh```
+```./Minecraft-Server-Skript.sh```
 
 
-## Teamspeak-Server-Verwaltungsskript ##
+## Minecraft-Server-Verwaltungsskript ##
 
 Dieses Shell-Skript dient zur Vereinfachung der Verwaltung von Prozessen.
 
