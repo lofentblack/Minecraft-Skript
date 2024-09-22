@@ -13,7 +13,7 @@ LOCK=".lock-mc"
 
 # Fehler Codes
 FEHLER1="Diese Version enthält nicht gültige Zeichen! FehlerCode(01)"
-FEHLER2="Fehler beim Inserieren. FehlerCode(02)"
+FEHLER2="Fehler es wurde keine Spigot-Datei gefunden. FehlerCode(02)"
 FEHLER3="Server wurde nicht gestartet da die Start Datei nicht gefunden wurde. FehlerCode(03)"
 FEHLER4="In dem Verzeichnis befinden sich bereits Datein. FehlerCode(04)"
 
