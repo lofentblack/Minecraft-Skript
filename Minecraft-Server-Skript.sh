@@ -46,11 +46,11 @@ if ! [[ $version == $SkriptVersion ]]; then
 
 	echo $(tput setaf 3)"Update von Version "$SkriptVersion" zu "$version"."
 	echo "$(tput sgr0)"
-	wget https://raw.githubusercontent.com/lofentblack/Minecraft-Skript/refs/heads/main/Minecraft-Server-Skript.sh -O Minecraft-new.sh
+	wget https://raw.githubusercontent.com/lofentblack/Minecraft-Skript/refs/heads/main/Minecraft-Server-Skript.sh -O Minecraft.new.sh
 	rm $LOCK
-	chmod 775 Minecraft-Server-Skript.sh-new.sh
+	chmod 775 Minecraft.new.sh
 	rm Minecraft-Server-Skript.sh
-	mv Minecraft-Server-Skript.sh-new.sh Minecraft-Server-Skript.sh
+	mv Minecraft.new.sh Minecraft-Server-Skript.sh
 
 fi
 }
