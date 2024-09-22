@@ -6,10 +6,11 @@
 
 ```./Minecraft-Server-Skript.sh```
 
+<img src="https://i.ibb.co/GTfYDZ5/mc.png" alt="mc" border="0">
 
 ## Minecraft-Server-Verwaltungsskript ##
 
-Dieses Shell-Skript dient zur Vereinfachung der Verwaltung von Prozessen.
+Mit diesem Skript kann man ganz einfach einen Minecraft-Server (Spigot) installieren und verwalten sowie einen Bungeecord-Server installieren.
 
 
 ## Installation ##
