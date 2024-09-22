@@ -14,8 +14,8 @@ LOCK=".lock-mc"
 # Fehler Codes
 FEHLER1="Diese Version enthält nicht gültige Zeichen! FehlerCode(01)"
 FEHLER2="Fehler es wurde keine Spigot-Datei gefunden. FehlerCode(02)"
-FEHLER3="Server wurde nicht gestartet da die Start Datei nicht gefunden wurde. FehlerCode(03)"
-FEHLER4="In dem Verzeichnis befinden sich bereits Datein. FehlerCode(04)"
+FEHLER3="Server wurde nicht gestartet da die Startdatei nicht gefunden wurde. FehlerCode(03)"
+FEHLER4="In dem Verzeichnis befinden sich bereits Dateien. FehlerCode(04)"
 
 content=$(wget https://raw.githubusercontent.com/lofentblack/Minecraft-Skript/refs/heads/main/version.txt -q -O -)
 Version=$content
@@ -96,7 +96,7 @@ clear
 echo "$(tput setaf 2)"
 figlet -f slant -c $SCRIPTNAME
 echo $rot
-echo "Mit dem Ausführen des Skripts Akzeptierst du der Lizenz von LofentBlack.de und die Minecraft Eula."
+echo "Mit dem Ausführen des Skripts akzeptierst du der Lizenz von LofentBlack.de/licence und die Minecraft Eula."
 echo "$(tput sgr0)"
 }
 
@@ -112,19 +112,19 @@ clear
 	echo "$(tput setaf 2)"
 	figlet -f slant -c $SCRIPTNAME
 	echo $rot
-	echo "Mit dem Ausführen des Skripts Akzeptierst du der Lizenz von LofentBlack.de und die Minecraft Eula."
+	echo "Mit dem Ausführen des Skripts akzeptierst du der Lizenz von LofentBlack.de/licence und die Minecraft Eula."
 	echo "$(tput sgr0)"
 
 	echo "1) Minecraft Server starten"
 	echo "2) Minecraft Server stoppen"
 	echo "3) Minecraft Server installieren(spigot)"
-	echo "4) BungeeCord Server insterlieren"
+	echo "4) BungeeCord Server installieren"
 	echo "5) Beenden"
     read -p "Was möchten Sie machen?: " machen
 
 	if ! [ -z $machen ] && [ $machen == "1" ]; then
 		LOGO
-		read -p "Bitte geben die nun den Namen des Server an: " name1
+		read -p "Bitte geben die nun den Namen des Servers an: " name1
 		if [ -d $SCRIPTPATH/$ServerVerzeichniss/$name1 ]; then
 			if [ -f $SCRIPTPATH/$ServerVerzeichniss/$name1/restart.sh ]; then
 				LOGO
@@ -137,7 +137,7 @@ clear
 				sleep 4
 			fi
 			else
-			echo "Das Verzeichnis Existiert nicht"
+			echo "Das Verzeichnis existiert nicht"
 			sleep 3
 		fi
 	fi
@@ -152,7 +152,7 @@ clear
 			echo "Der Server $name wurde Erfolgreich Beendet"
 		else
 			LOGO
-			echo "Der Server ist Offline oder Existiert nicht!"
+			echo "Der Server ist Offline oder existiert nicht!"
 		fi
 	fi
 
@@ -452,10 +452,10 @@ clear
 			echo Screen-name: $name
 			echo Verzeichniss: $SCRIPTPATH/$ServerVerzeichniss/$name
 
-			echo "Minecraft-version: $Version"
+			echo "Minecraft-Version: $Version"
 
-			echo "Minimal RAM: "$Minimal"G"
-			echo "Maximal RAM: "$Maximal"G"
+			echo "Minimale RAM: "$Minimal"G"
+			echo "Maximale RAM: "$Maximal"G"
 			echo "Empfohlen Spieler zahl: "${Empfohlen_Spieler}
 
 			echo ""
@@ -553,8 +553,8 @@ clear
 
 				echo "Minecraft-version: BungeeCord Server"
 
-				echo "Minimal RAM: "$Minimal"G"
-				echo "Maximal RAM: "$Maximal"G"
+				echo "Minimale RAM: "$Minimal"G"
+				echo "Maximale RAM: "$Maximal"G"
 
 				echo ""
 				echo "--- Information zum erstellten BungeeCord Server ---"
@@ -576,10 +576,10 @@ clear
 		
 		
 		if [ -z $machen ]; then
-				echo "Keine Zahl erkannt"
+				echo "Keine Zahl erkannt."
 		fi
 		if [[ $machen =~ ^[a-z,A-Z]+$ ]];then
-			echo "Bitte benutze keine buchstaben"
+			echo "Bitte benutze keine Buchstaben"
 		fi
 
 
