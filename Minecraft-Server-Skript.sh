@@ -96,7 +96,7 @@ clear
 echo "$(tput setaf 2)"
 figlet -f slant -c $SCRIPTNAME
 echo $rot
-echo "Mit dem Ausführen des Skripts akzeptierst du der Lizenz von LofentBlack.de/licence und die Minecraft Eula."
+echo "Mit dem Ausführen des Skripts akzeptierst du der Lizenz von LofentBlack.de/licence und die Minecraft EULA."
 echo "$(tput sgr0)"
 }
 
@@ -112,7 +112,7 @@ clear
 	echo "$(tput setaf 2)"
 	figlet -f slant -c $SCRIPTNAME
 	echo $rot
-	echo "Mit dem Ausführen des Skripts akzeptierst du der Lizenz von LofentBlack.de/licence und die Minecraft Eula."
+	echo "Mit dem Ausführen des Skripts akzeptierst du der Lizenz von LofentBlack.de/licence und die Minecraft EULA."
 	echo "$(tput sgr0)"
 
 	echo "1) Minecraft Server starten"
@@ -175,7 +175,7 @@ clear
 			
 			cd $SCRIPTPATH/$ServerVerzeichniss/$name
 			echo ""
-			echo "Geben Sie nun die Server Version an z. B. "'"1.8.8"'" oder "'"1.15"'""
+			echo "Geben Sie nun die Server Version an z. B. "'"1.8.8"'" oder "'"1.20"'""
 			read -p "Welche Version soll der Server haben: " Version
 			ungueltig=$(echo "$Version" | sed 's/[^0-9,.]//g')
 
@@ -359,8 +359,29 @@ clear
 				screen -Sdm $screen sudo apt-get install openjdk-15-jdk -y
 				wget https://cdn.getbukkit.org/spigot/spigot-1.16.5.jar
 				
+				elif [ $Version == "1.17" ]; then
+				screen -Sdm $screen sudo apt-get install openjdk-16-jdk -y
+				wget https://cdn.getbukkit.org/spigot/spigot-1.17.jar
+				
+				elif [ $Version == "1.17.1" ]; then
+				screen -Sdm $screen sudo apt-get install openjdk-16-jdk -y
+				wget https://cdn.getbukkit.org/spigot/spigot-1.17.1.jar
+							
+				elif [ $Version == "1.18" ]; then
+				screen -Sdm $screen sudo apt-get install openjdk-17-jdk -y
+				wget https://cdn.getbukkit.org/spigot/spigot-1.18.jar
+					
+				elif [ $Version == "1.18.1" ]; then
+				screen -Sdm $screen sudo apt-get install openjdk-17-jdk -y
+				wget https://cdn.getbukkit.org/spigot/spigot-1.18.1.jar
+				
+				elif [ $Version == "1.18.2" ]; then
+				screen -Sdm $screen sudo apt-get install openjdk-17-jdk -y
+				wget https://cdn.getbukkit.org/spigot/spigot-1.18.2.jar
+					
+							
 				elif ! [ "$ungueltig" == "" ]; then
-				screen -Sdm $screen sudo apt-get install openjdk-15-jdk -y
+				screen -Sdm $screen sudo apt-get install openjdk-17-jdk -y
 				wget https://download.getbukkit.org/spigot/spigot-$Version.jar
 			else
 				LOGO
